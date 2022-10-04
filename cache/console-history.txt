@@ -1,0 +1,56 @@
+run /scripts/deploy.js
+run ./scripts/deploy.js
+run scripts/deploy.js
+run /scripts/deploy.js
+./scripts/deploy.js
+/scripts/deploy.js
+await wall.owner()
+wall.owner()
+const [ac1, ac2] = await ethers.getSigners()
+const [addr1, addr2] = await ethers.getSigners()
+const [addr1, addr2] = ethers.getSigners()
+addr1.address
+await wall2.owner()
+await wall2.name()
+wall2.name()
+const wall2 = await Wall2.attach("0x3B02fF1e626Ed7a8fd6eC5299e2C54e1421B626B")
+const new = await Wall2.attach("0x3B02fF1e626Ed7a8fd6eC5299e2C54e1421B626B")
+comst new = await Wall2.attach("0x3B02fF1e626Ed7a8fd6eC5299e2C54e1421B626B")
+const Wall2 = await hre.ethers.getContractFactory("Wall");
+const MyContract = await ethers.getContractFactory("MyContract");
+await factory.walls(0)
+await factory.walls()
+await factory.createNewWall(0, "new")
+await wall.name()
+wall.name()
+const factory = await Factory.attach("0x0165878A594ca255338adfa4d48449f69242Eb8F")
+const Factory = await hre.ethers.getContractFactory("WallFactory");
+const wall = await Wall.attach("0x5FC8d32690cc91D4c39d9d3abcBD16989F875707")
+const Wall = await hre.ethers.getContractFactory("Wall");
+await wall.messages(0)
+await wall.setMessage("testt")
+await wall.setMessage
+wall
+const wall = Wall1
+await Wall1.name()
+const Wall1 = await (await hre.ethers.getContractFactory("Wall")).attach("0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+const Wall = await (await hre.ethers.getContractFactory("Wall")).attach("0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+const Wall = await hre.ethers.getContractFactory("Wall").attach("0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+const Wall = await hre.ethers.getContractFactory("Wall");
+await wall.name()
+await wallll.name()
+const wallll = await Wall.attach("0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+const walll = await Wall.attach("0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+const walll = await attach ("0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512")
+await wall.name()
+const wall = await Wall.deploy(0,"testName");
+const Wall = await hre.ethers.getContractFactory("Wall");
+wall.name()
+await Wall.name()
+const Wall = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+const Wall = ""0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+await Wall.name()
+ether.getSigner()
+hre.ethers
+const hre = require("hardhat")
+ethers
