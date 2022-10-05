@@ -10,7 +10,7 @@ contract Wall is Ownable {
         transferOwnership(_newOwner);
     }
 
-    address master = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+    address master = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
 
     uint256 public minDonate;
     string public name;
@@ -34,11 +34,11 @@ contract Wall is Ownable {
         payable
         minValue(minDonate)
     {
-        Messages memory _message;
-        _message.message = _text;
-        _message.sender = msg.sender;
-        _message.id = uint64(messages.length);
-        messages.push(_message);
+        messages.push(Messages({
+            sender: msg.sender,
+            message: _text,
+            id: uint64(messages.length)
+        }));
 
         emit messageSended(uint64(messages.length), _text, msg.sender);
     }
@@ -46,6 +46,10 @@ contract Wall is Ownable {
     function withdraw() public onlyOwner {
         payable(msg.sender).transfer((address(this).balance * 99) / 100);
         payable(master).transfer(address(this).balance);
+    }
+
+    function setMinDonate(uint _newValue) public onlyOwner{
+        minDonate = _newValue;
     }
 
     fallback() external payable {}

@@ -109,8 +109,8 @@
       ]
     },
     "/home/artem/hardhat/infinityWall/contracts/InfinityWall.sol": {
-      "lastModificationDate": 1664895234483,
-      "contentHash": "0c94fe27b3911fa02aa6e98ba313457c",
+      "lastModificationDate": 1664957272985,
+      "contentHash": "66cbf530b60921050d4a015033726602",
       "sourceName": "contracts/InfinityWall.sol",
       "solcConfig": {
         "version": "0.8.17",
