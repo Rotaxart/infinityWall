@@ -56,6 +56,18 @@ describe("Wall", async () => {
     assert(newValue.toNumber() === 10, "value not changed");
   });
 
+  it("Owner modifer work correctly", async () => {
+    const [ac1, ac2] = await ethers.getSigners();
+    const Wall = await hre.ethers.getContractFactory("Wall");
+    const wall = await Wall.deploy(0, "testName", ac1.address);
+    await wall.deployed();
+    try{
+      await wall.connect(ac2).setMinDonate(10);
+    }catch(error){};
+    const newValue = await wall.minDonate();
+    assert(newValue.toNumber() === 0, "value changed");
+  });
+
   it("min donate works correctly", async () => {
     const [ac1, ac2] = await ethers.getSigners();
     const Wall = await hre.ethers.getContractFactory("Wall");
@@ -133,5 +145,33 @@ describe("WallFactory", async () => {
       ethers.utils.formatEther(balance1.sub(prevBalance1)) > 9 &&
         ethers.utils.formatEther(balance2.sub(prevBalance2)) > 989
     );
+  });
+
+  it("Owner modifer work correctly", async () => {
+    const provider = ethers.provider;
+    const [ac1, ac2, ac3] = await ethers.getSigners();
+    const Wall = await hre.ethers.getContractFactory("Wall");
+    const wall = await Wall.deploy(0, "testName", ac1.address);
+    const WallFactory = await hre.ethers.getContractFactory("WallFactory");
+    const wallFactory = await WallFactory.deploy();
+    await wallFactory.connect(ac2).createNewWall(0, "test");
+    const NewWall = await wallFactory.walls(0);
+    const newWall = await Wall.attach(NewWall);
+    const owner = await newWall.owner();
+
+    const prevBalance1 = await provider.getBalance(ac1.address);
+    const prevBalance2 = await provider.getBalance(ac2.address);
+
+    await newWall
+      .connect(ac3)
+      .setMessage("Owner modifer", { value: ethers.utils.parseEther("1000.0") });
+    try{
+      await newWall.connect(ac1).withdraw();
+      assert(false, "must revert")
+    } catch(error){
+      
+    }
+    
+    
   });
 });

@@ -1,41 +1,6 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/artem/hardhat/infinityWall/contracts/Lock.sol": {
-      "lastModificationDate": 1664551782376,
-      "contentHash": "ae66265769cc28ebdaa34881df95bc5e",
-      "sourceName": "contracts/Lock.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.9"
-      ],
-      "artifacts": [
-        "Lock"
-      ]
-    },
     "/home/artem/hardhat/infinityWall/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
       "lastModificationDate": 1664786719471,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
@@ -109,8 +74,8 @@
       ]
     },
     "/home/artem/hardhat/infinityWall/contracts/InfinityWall.sol": {
-      "lastModificationDate": 1664957272985,
-      "contentHash": "66cbf530b60921050d4a015033726602",
+      "lastModificationDate": 1664976751264,
+      "contentHash": "9df29c04308e46753ef06fe34d69442d",
       "sourceName": "contracts/InfinityWall.sol",
       "solcConfig": {
         "version": "0.8.17",

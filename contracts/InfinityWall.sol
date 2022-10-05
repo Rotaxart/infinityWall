@@ -10,7 +10,7 @@ contract Wall is Ownable {
         transferOwnership(_newOwner);
     }
 
-    address master = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
+    address master = 0x40223486555fF3f5d1e3863B7d3bd24dFFd3b353;
 
     uint256 public minDonate;
     string public name;
@@ -51,8 +51,6 @@ contract Wall is Ownable {
     function setMinDonate(uint _newValue) public onlyOwner{
         minDonate = _newValue;
     }
-
-    fallback() external payable {}
 
     receive() external payable {}
 }
